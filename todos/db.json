@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "Angular",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": "Javascript",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "HTML",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<main>
+<div *ngIf="!todos.length">Loading Tasks... Maybe there isn't Tasks. Create Some
+</div>
+
+<ul>
+  <li *ngFor="let todo of todos, let i = index" >{{todo.title}}
+    <input type="checkbox" (click)="checkTask(todo,i)" [checked] = "check[i]">
+    <button (click)="editTask(todo)">Edit</button>
+  </li>
+</ul>
+
+<form>
+  <input type="text" required name="title" [(ngModel)] = 'newTodo.title'>
+  <button (click)="createTask()">+</button>
+</form>
+</main>
+

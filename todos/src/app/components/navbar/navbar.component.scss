@@ -4,3 +4,19 @@ ul {
   justify-content: space-evenly
 }
 
+a:hover{
+  background: linear-gradient(360deg, rgba(0,251,33,1) 0%, rgba(9,111,121,1) 50%);
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.active {
+  background: linear-gradient(360deg, rgba(0,251,33,1) 0%, rgba(9,111,121,1) 50%);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+

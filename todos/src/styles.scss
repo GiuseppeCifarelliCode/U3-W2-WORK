@@ -9,3 +9,23 @@ main {
 a {
   text-decoration: none;
 }
+
+html {
+  background: linear-gradient(180deg, rgba(0,251,33,1) 0%, rgba(9,111,121,1) 50%);
+  background-repeat: no-repeat;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+button {
+  margin-left: 10px;
+  padding: 2px 10px;
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  color: white;
+}
+
+button:hover {
+  background: linear-gradient(90deg, rgba(0,251,33,1) 0%, rgba(9,111,121,1) 50%);
+  color: black;
+  cursor: pointer;
+}

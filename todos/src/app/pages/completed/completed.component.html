@@ -1,9 +1,8 @@
-<main>
   <main>
-    <div *ngIf="!todos.length">Loading Tasks... Maybe there isn't Tasks. Create Some
-      <div>
-        <a routerLink="/todo">Go to Create Page</a>
-      </div>
+    <div *ngIf="!fetchCompleted">Loading Tasks...
+    </div>
+    <div *ngIf="emptyTodo">There isn't Tasks. Create Some
+      <div><a routerLink="/todo">Go to Create Page</a></div>
     </div>
 <ul>
   <li *ngFor="let todo of todos" >{{todo.title}}

@@ -16,7 +16,7 @@ export class CompletedComponent {
 
   constructor(private todoSvc:TodosService){}
 
-  ngOnInit(){
+  ngOnInit():void{
     this.todoSvc.get(this.filterURL)
     .then(todo => {
       this.todos = todo
@@ -26,7 +26,7 @@ export class CompletedComponent {
 
   }
 
-  delete(todo:Todo){
+  delete(todo:Todo):void{
     this.todoSvc.delete(todo)
     this.todos = this.todos.filter(el => todo.title != el.title)
     if(this.todos.length === 0) this.emptyTodo = true

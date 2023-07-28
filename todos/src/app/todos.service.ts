@@ -23,7 +23,7 @@ export class TodosService {
     }).then(res => res.json())
   }
 
-  edit(todo:Todo){
+  edit(todo:Todo):Promise<Todo>{
     return fetch(this.URL + '/' + todo.id, {
       method: 'PUT',
       headers: {
@@ -33,7 +33,7 @@ export class TodosService {
     }).then(res => res.json())
   }
 
-  delete(todo:Todo){
+  delete(todo:Todo):Promise<Todo>{
     return fetch(this.URL+'/'+ todo.id,{
       method: 'DELETE'
     }).then(res => res.json());

@@ -18,7 +18,7 @@ export class TodoComponent {
     constructor(private todoSvc:TodosService){
     }
 
-    ngOnInit(){
+    ngOnInit():void{
       this.todoSvc.get()
       .then(todo => {
         this.todos = todo
@@ -28,20 +28,20 @@ export class TodoComponent {
       })
     }
 
-    createTask(){
+    createTask():void{
       this.todoSvc.create(this.newTodo)
       this.todos.push(this.newTodo)
       this.newTodo = new Todoclass('', false)
       this.emptyTodo = false
     }
 
-    editTask(todo:Todo, i:number){
+    editTask(todo:Todo, i:number):void{
       this.newTodo = todo
       this.todos[i].title = todo.title
       this.todoSvc.edit(todo)
     }
 
-    checkTask(todo:Todo,i:number){
+    checkTask(todo:Todo,i:number):void{
       this.check[i] = todo.completed
       todo.completed = todo.completed === true ? false : true
       this.todoSvc.edit(todo)

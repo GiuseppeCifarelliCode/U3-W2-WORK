@@ -15,8 +15,7 @@ export class TodoComponent {
     check:boolean[] = []
     emptyTodo:boolean = false
     fetchCompleted:boolean = false
-    constructor(private todoSvc:TodosService){
-    }
+    constructor(private todoSvc:TodosService){}
 
     ngOnInit():void{
       this.todoSvc.get()
@@ -35,11 +34,11 @@ export class TodoComponent {
       this.emptyTodo = false
     }
 
-    editTask(todo:Todo, i:number):void{
-      this.newTodo = todo
-      this.todos[i].title = todo.title
-      this.todoSvc.edit(todo)
-    }
+    // editTask(todo:Todo, i:number):void{
+    //   this.newTodo = todo
+    //   this.todos[i].title = todo.title
+    //   this.todoSvc.edit(todo)
+    // }
 
     checkTask(todo:Todo,i:number):void{
       this.check[i] = todo.completed

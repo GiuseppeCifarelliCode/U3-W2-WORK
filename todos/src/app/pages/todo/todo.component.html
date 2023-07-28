@@ -7,7 +7,7 @@
 <ul>
   <li *ngFor="let todo of todos, let i = index" >{{todo.title}}
     <input type="checkbox" (click)="checkTask(todo,i)" [checked] = "check[i]">
-    <button (click)="editTask(todo,i)">Edit</button>
+    <!-- <button   (click)="editTask(todo,i)">Edit</button>  -->
   </li>
 </ul>
 
